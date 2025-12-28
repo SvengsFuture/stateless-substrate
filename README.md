@@ -1,9 +1,9 @@
+# Stateless Substrate
 The Stateless Substrate is a design pattern for systems that prioritize enforcement over explanation. Modern architectures are drowning in recovery entropy because they treat memory as a prerequisite for intelligence, leading to a sprawl of retries and reconciliation logic. This repository replaces that state-heavy negotiation with a minimal reference implementation of a memory-optional architecture.
 
 At the heart of this system is the Binary Gate, a pattern that favors refusal over repair. When a system encounters an invalid state, it does not ask why or attempt to smooth the error. Instead, the unit signals a hard closure and resets. This ensures that recovery happens in constant time without the need for historical reconstruction.
 
 # The Stateless Substrate: Minimal Enforcement Pattern
-
 def process_request(request, validator):
     """
     Every interaction is a 'first-time' interaction.
